@@ -9,10 +9,20 @@
     <style>
         #minhadiv {
             background-color: rgb(255, 85, 173);
-            width: 200px;
-            height: 300px;
+            width: 400px;
+            min-height: 300px;
+            padding: 30px;
+        }
+
+        .item-lista{
+
+background-color: aquamarine;
+padding: 5px;
+margin: 5px;
+
 
         }
+        
     </style>
 
 
@@ -26,24 +36,99 @@ DOM(O Modelo de Objeto de Documento (DOM) é uma interface que transforma o cód
 
 BOM (Browser Object Model) é o conjunto de objetos em JavaScript que permite ao código interagir com o navegador  -->
 
-    <div id="minhadiv"></div>
+    <div id="minhadiv">
+        <form action="#" method="post">
+            <input type="text" name="" id="campo-texto">
+            <button id="meu-botao">MUDAR TEXTO</button>
+        </form>
+
+    </div>
     <!-- aqui abaixo é onde se acrescenta a barra pra acrescentar o que você digitar!! -->
-    <input type="text" name="" id="campo-texto">  
-    <button id="meu-botao">MUDAR TEXTO</button>
     <script>
 
         let divrosa = document.querySelector("#minhadiv");
-        console.log(divrosa);
         let textoinput = document.querySelector("#campo-texto")
         console.log(divrosa);
 
-        minhafuncao = function mudartexto() {
-            divrosa.textContent = textoinput.value;
+        minhafuncao = function mudartexto(evento) {
+            evento.preventDefault();
+            let novadiv = document.createElement("div")
+            novadiv.textContent = textoinput.value;
+            novadiv.classList.add("item-lista")
+            novadiv.style.marginLeft = "30px";
+            divrosa.append(novadiv)
         }
 
         let botao = document.querySelector("#meu-botao")
         console.log(botao);
         botao.addEventListener("click", minhafuncao)
+
+        let alunos = [
+
+        {
+            nome:"Leonardo",
+            idade: 39,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026",
+        },
+
+        {
+            nome:"Davi",
+            idade: 19,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026",
+        },
+
+        {
+            nome:"Carlos",
+            idade: 24,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026",
+        },
+
+        {
+            nome:"João",
+            idade: 22,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026",
+        },
+
+        {
+            nome:"Mirian",
+            idade: 35,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026",
+        },
+
+        {
+            nome:"Samara",
+            idade: 33,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026",
+        },
+
+        {
+            nome:"Antonio",
+            idade: 31,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026",
+        },
+
+        ]
+
+        console.log(alunos);
+        alert(alunos.map((aluno) => aluno.turno))
+        // let mostrartodososnomes = function mostrarnome(aluno) {
+        //     alert(aluno.nome)
+        // }
+        // alunos.forEach(mostrartodososnomes)
 
 
     </script>
