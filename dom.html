@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #minhadiv {
+            background-color: rgb(255, 85, 173);
+            width: 200px;
+            height: 300px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Aula de hoje 07/10/2026 - DOM E BOM
+
+DOM(O Modelo de Objeto de Documento (DOM) é uma interface que transforma o código HTML de uma página em uma árvore de objetos que o JavaScript consegue ler e alterar) 
+
+BOM (Browser Object Model) é o conjunto de objetos em JavaScript que permite ao código interagir com o navegador  -->
+
+    <div id="minhadiv"></div>
+    <!-- aqui abaixo é onde se acrescenta a barra pra acrescentar o que você digitar!! -->
+    <input type="text" name="" id="campo-texto">  
+    <button id="meu-botao">MUDAR TEXTO</button>
+    <script>
+
+        let divrosa = document.querySelector("#minhadiv");
+        console.log(divrosa);
+        let textoinput = document.querySelector("#campo-texto")
+        console.log(divrosa);
+
+        minhafuncao = function mudartexto() {
+            divrosa.textContent = textoinput.value;
+        }
+
+        let botao = document.querySelector("#meu-botao")
+        console.log(botao);
+        botao.addEventListener("click", minhafuncao)
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
