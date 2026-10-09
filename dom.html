@@ -14,15 +14,14 @@
             padding: 30px;
         }
 
-        .item-lista{
+        .item-lista {
 
-background-color: aquamarine;
-padding: 5px;
-margin: 5px;
+            background-color: aquamarine;
+            padding: 5px;
+            margin: 5px;
 
 
         }
-        
     </style>
 
 
@@ -65,61 +64,61 @@ BOM (Browser Object Model) é o conjunto de objetos em JavaScript que permite ao
 
         let alunos = [
 
-        {
-            nome:"Leonardo",
-            idade: 39,
-            curso: "FullCycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026",
-        },
+            {
+                nome: "Leonardo",
+                idade: 39,
+                curso: "FullCycle",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026",
+            },
 
-        {
-            nome:"Davi",
-            idade: 19,
-            curso: "FullCycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026",
-        },
+            {
+                nome: "Davi",
+                idade: 19,
+                curso: "FullCycle",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026",
+            },
 
-        {
-            nome:"Carlos",
-            idade: 24,
-            curso: "FullCycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026",
-        },
+            {
+                nome: "Carlos",
+                idade: 24,
+                curso: "FullCycle",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026",
+            },
 
-        {
-            nome:"João",
-            idade: 22,
-            curso: "FullCycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026",
-        },
+            {
+                nome: "João",
+                idade: 22,
+                curso: "IA",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026",
+            },
 
-        {
-            nome:"Mirian",
-            idade: 35,
-            curso: "FullCycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026",
-        },
+            {
+                nome: "Mirian",
+                idade: 35,
+                curso: "FullStack",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026",
+            },
 
-        {
-            nome:"Samara",
-            idade: 33,
-            curso: "FullCycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026",
-        },
+            {
+                nome: "Samara",
+                idade: 33,
+                curso: "FullCycle",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026",
+            },
 
-        {
-            nome:"Antonio",
-            idade: 31,
-            curso: "FullCycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026",
-        },
+            {
+                nome: "Antonio",
+                idade: 31,
+                curso: "FullCycle",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026",
+            },
 
         ]
 
@@ -129,6 +128,32 @@ BOM (Browser Object Model) é o conjunto de objetos em JavaScript que permite ao
         //     alert(aluno.nome)
         // }
         // alunos.forEach(mostrartodososnomes)
+        console.log(alunos.filter((aluno) => aluno.curso == "IA"))
+
+        let alunonovo = {
+            nome: "Daniel",
+            idade: 15,
+            curso: "FullCycle",
+            turno: "Manhã",
+            data_de_inicio: "09/10/2026",
+
+        }
+
+        alunos.push(alunonovo)
+        alunos.push({
+            nome: "Edilson",
+            idade: 31,
+            curso: "FullCycle",
+            turno: "Tarde",
+            data_de_inicio: "09/10/2026",
+        })
+
+        console.log(alunos)
+
+        let alunoexcluido = alunos.pop()
+        console.log(alunoexcluido)
+
+
 
 
     </script>
